@@ -14,7 +14,7 @@
 </style></head>
 <body>
 <div class="audio-player" id="audioPlayer">
-  <audio id="siteAudio" src="assets/칠죄종-theme.mp3" preload="auto" loop></audio>
+  <audio id="siteAudio" src="칠죄종-theme.mp3" preload="auto" loop></audio>
   <div class="audio-top">
     <div class="audio-disc">VII</div>
     <div class="audio-meta"><div class="audio-label">SEVEN SINS / THEME</div><div class="audio-title">JAELEE — Extras, move</div></div>
@@ -53,7 +53,7 @@ document.getElementById("appearance").textContent=m.appearance;
 document.getElementById("skills").textContent=m.skills;
 document.getElementById("feature").textContent=m.feature;
 document.getElementById("sigil").textContent=m.en[0];
-const art=document.getElementById("profileArt"); art.src="assets/"+images[keys[index]]; art.alt=m.name+" 일러스트";
+const art=document.getElementById("profileArt"); art.src=images[keys[index]]; art.alt=m.name+" 일러스트";
 const select=document.getElementById("memberSelect");select.value=keys[index];select.addEventListener("change",()=>location.href="profile.html?member="+encodeURIComponent(select.value));
 document.getElementById("prev").href="profile.html?member="+encodeURIComponent(keys[(index-1+keys.length)%keys.length]);
 document.getElementById("next").href="profile.html?member="+encodeURIComponent(keys[(index+1)%keys.length]);
