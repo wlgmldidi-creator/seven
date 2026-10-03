@@ -18,7 +18,20 @@ section{padding:102px 0;border-bottom:1px solid var(--line)}.toprow{display:flex
 @media(max-width:900px){.sins-grid{grid-template-columns:1fr 1fr}.manifesto{grid-template-columns:1fr}.manifesto-main{border-right:0;border-bottom:1px solid var(--line)}}@media(max-width:760px){.container{width:min(100% - 32px,1220px)}nav{height:68px}.nav a:not(:last-child){display:none}.hero{min-height:650px}.hero:before{width:470px;height:470px}.hero:after{width:350px;height:350px}.hero-seal{width:82px;height:82px}section{padding:76px 0}.toprow{display:block}.desc{margin-top:22px}.sins-grid{gap:9px}.sin-card{min-height:300px;padding:18px}.seal{width:58px;height:58px}.sin-card h3{font-size:19px}footer{padding:18px 0;flex-direction:column;align-items:flex-start;gap:8px}}@media(max-width:460px){.sins-grid{grid-template-columns:1fr}}
 </style>
 </head>
-<body><div class="top"></div>
+<body>
+<div class="audio-player" id="audioPlayer">
+  <audio id="siteAudio" src="assets/칠죄종-theme.mp3" preload="auto" loop></audio>
+  <div class="audio-top">
+    <div class="audio-disc">VII</div>
+    <div class="audio-meta"><div class="audio-label">SEVEN SINS / THEME</div><div class="audio-title">JAELEE — Extras, move</div></div>
+    <button class="audio-btn" id="audioToggle" type="button">PLAY</button>
+  </div>
+  <div class="audio-bottom">
+    <input class="audio-progress" id="audioProgress" type="range" min="0" max="100" value="0" step="0.1" aria-label="음악 진행">
+    <span class="audio-time" id="audioTime">0:00 / 0:00</span>
+  </div>
+</div>
+<div class="top"></div>
 <header class="container"><nav><a class="brand" href="#top"><span class="mark"><span>7</span></span><span>SEVEN SINS</span></a><div class="nav"><a href="#about">ABOUT</a><a href="#group">GROUP</a><a href="#sins">THE CAST</a><a href="profile.html?member=정잭">ENTER ↗</a></div></nav></header>
 <main id="top">
 <section class="hero"><div class="container hero-inner"><div class="hero-seal"><span>VII</span></div><div class="eyebrow">SEVEN DEADLY SINS · MAFIA CODE</div><h1>칠<em>죄종</em></h1><div class="hero-en">SEVEN SINS / MAFIA</div><p class="hero-copy">7대 죄악의 죄명을 코드네임으로 사용하는 마피아 집단.<br>일곱 개의 욕망은 각자의 역할과 무기가 되어 조직의 이름 아래 움직입니다.</p><a class="hero-btn" href="#sins">ENTER THE ORDER ↘</a></div></section>
@@ -29,15 +42,46 @@ section{padding:102px 0;border-bottom:1px solid var(--line)}.toprow{display:flex
 </div></div></section>
 <section id="group" class="group-section"><div class="container">
 <div class="toprow"><div><span class="eyebrow">02 / THE GROUP</span><h2>일곱 개의 죄가 모인<br><em>하나의 이름.</em></h2></div><p class="desc">칠죄종을 상징하는 단체 일러스트입니다. 일곱 죄악의 이미지와 각자의 상징을 한 장면에 담았습니다.</p></div>
-<div class="group-frame"><img class="group-art" src="칠죄종-단체.png" alt="칠죄종 단체 일러스트"><div class="group-caption"><span><strong>SEVEN SINS</strong> · GROUP ILLUSTRATION</span><span>PRIDE · WRATH · LUST · GLUTTONY · JEALOUSY · GREED · SLOTH</span></div></div>
+<div class="group-frame"><img class="group-art" src="assets/칠죄종-단체.png" alt="칠죄종 단체 일러스트"><div class="group-caption"><span><strong>SEVEN SINS</strong> · GROUP ILLUSTRATION</span><span>PRIDE · WRATH · LUST · GLUTTONY · JEALOUSY · GREED · SLOTH</span></div></div>
 </div></section>
-<section id="sins" class="sins"><div class="container"><div class="toprow"><div><span class="eyebrow">03 / THE CAST</span><h2>칠죄종을 움직이는<br><em>일곱 명의 이름.</em></h2></div><p class="desc">사용자가 지정한 캐스트 순서대로 구성했습니다. 카드를 선택하면 세부 프로필을 볼 수 있습니다.</p></div><div class="sins-grid"><article class="sin-card"><img class="card-img" src="캐마.png" alt="김캐마 일러스트"><span class="num">01</span><div class="seal"><span>E</span></div><div class="en">ENVY</div><h3>질투</h3><p>조직의 메디컬</p><a class="card-link" href="profile.html?member=캐마">VIEW PROFILE ↗</a></article>
-<article class="sin-card"><img class="card-img" src="대부기.png" alt="대부기 일러스트"><span class="num">02</span><div class="seal"><span>W</span></div><div class="en">WRATH</div><h3>분노</h3><p>행동대장</p><a class="card-link" href="profile.html?member=대부기">VIEW PROFILE ↗</a></article>
-<article class="sin-card"><img class="card-img" src="향단.png" alt="문향단 일러스트"><span class="num">03</span><div class="seal"><span>G</span></div><div class="en">GREED</div><h3>탐욕</h3><p>정보상</p><a class="card-link" href="profile.html?member=향단">VIEW PROFILE ↗</a></article>
-<article class="sin-card"><img class="card-img" src="정잭.png" alt="이정잭 일러스트"><span class="num">04</span><div class="seal"><span>P</span></div><div class="en">PRIDE</div><h3>오만</h3><p>조직의 수장</p><a class="card-link" href="profile.html?member=정잭">VIEW PROFILE ↗</a></article>
-<article class="sin-card"><img class="card-img" src="아랑.png" alt="아랑 일러스트"><span class="num">05</span><div class="seal"><span>L</span></div><div class="en">LUST</div><h3>색욕</h3><p>협상가</p><a class="card-link" href="profile.html?member=아랑">VIEW PROFILE ↗</a></article>
-<article class="sin-card"><img class="card-img" src="우현.png" alt="우현 일러스트"><span class="num">06</span><div class="seal"><span>G</span></div><div class="en">GLUTTONY</div><h3>식욕</h3><p>현장 처리 담당</p><a class="card-link" href="profile.html?member=우현">VIEW PROFILE ↗</a></article>
-<article class="sin-card"><img class="card-img" src="개.png" alt="개 일러스트"><span class="num">07</span><div class="seal"><span>S</span></div><div class="en">SLOTH</div><h3>나태</h3><p>해커이자 ‘마스코트 막내 공주’</p><a class="card-link" href="profile.html?member=개">VIEW PROFILE ↗</a></article></div></div></section>
+<section id="sins" class="sins"><div class="container"><div class="toprow"><div><span class="eyebrow">03 / THE CAST</span><h2>칠죄종을 움직이는<br><em>일곱 명의 이름.</em></h2></div><p class="desc">사용자가 지정한 캐스트 순서대로 구성했습니다. 카드를 선택하면 세부 프로필을 볼 수 있습니다.</p></div><div class="sins-grid"><article class="sin-card"><img class="card-img" src="assets/캐마.png" alt="김캐마 일러스트"><span class="num">01</span><div class="seal"><span>E</span></div><div class="en">ENVY</div><h3>질투</h3><p>조직의 메디컬</p><a class="card-link" href="profile.html?member=캐마">VIEW PROFILE ↗</a></article>
+<article class="sin-card"><img class="card-img" src="assets/대부기.png" alt="대부기 일러스트"><span class="num">02</span><div class="seal"><span>W</span></div><div class="en">WRATH</div><h3>분노</h3><p>행동대장</p><a class="card-link" href="profile.html?member=대부기">VIEW PROFILE ↗</a></article>
+<article class="sin-card"><img class="card-img" src="assets/향단.png" alt="문향단 일러스트"><span class="num">03</span><div class="seal"><span>G</span></div><div class="en">GREED</div><h3>탐욕</h3><p>정보상</p><a class="card-link" href="profile.html?member=향단">VIEW PROFILE ↗</a></article>
+<article class="sin-card"><img class="card-img" src="assets/정잭.png" alt="이정잭 일러스트"><span class="num">04</span><div class="seal"><span>P</span></div><div class="en">PRIDE</div><h3>오만</h3><p>조직의 수장</p><a class="card-link" href="profile.html?member=정잭">VIEW PROFILE ↗</a></article>
+<article class="sin-card"><img class="card-img" src="assets/아랑.png" alt="아랑 일러스트"><span class="num">05</span><div class="seal"><span>L</span></div><div class="en">LUST</div><h3>색욕</h3><p>협상가</p><a class="card-link" href="profile.html?member=아랑">VIEW PROFILE ↗</a></article>
+<article class="sin-card"><img class="card-img" src="assets/우현.png" alt="우현 일러스트"><span class="num">06</span><div class="seal"><span>G</span></div><div class="en">GLUTTONY</div><h3>식욕</h3><p>현장 처리 담당</p><a class="card-link" href="profile.html?member=우현">VIEW PROFILE ↗</a></article>
+<article class="sin-card"><img class="card-img" src="assets/개.png" alt="개 일러스트"><span class="num">07</span><div class="seal"><span>S</span></div><div class="en">SLOTH</div><h3>나태</h3><p>해커이자 ‘마스코트 막내 공주’</p><a class="card-link" href="profile.html?member=개">VIEW PROFILE ↗</a></article></div></div></section>
 <section class="cta"><div class="container cta-inner"><div><span class="eyebrow">FINAL FILE</span><h2>모든 죄에는<br><em>이름이 있다.</em></h2><p>SEVEN NAMES · ONE ORGANIZATION</p></div></div></section>
 </main><footer class="container"><span>© 2026 SEVEN SINS / 칠죄종</span><span>THE SINS ARE THE CODE</span></footer>
+
+<script>
+(function(){
+  const audio=document.getElementById("siteAudio"), btn=document.getElementById("audioToggle");
+  const progress=document.getElementById("audioProgress"), time=document.getElementById("audioTime");
+  const stateKey="sevenSinsAudioState";
+  function fmt(sec){if(!isFinite(sec)) return "0:00"; const m=Math.floor(sec/60), s=Math.floor(sec%60); return m+":"+String(s).padStart(2,"0")}
+  function update(){progress.value=audio.duration?((audio.currentTime/audio.duration)*100):0; time.textContent=fmt(audio.currentTime)+" / "+fmt(audio.duration); btn.textContent=audio.paused?"PLAY":"PAUSE";}
+  audio.addEventListener("loadedmetadata",function(){
+    try{const saved=JSON.parse(localStorage.getItem(stateKey)||"{}"); if(saved.time && saved.time<audio.duration) audio.currentTime=saved.time;}catch(e){}
+    update();
+  });
+  audio.addEventListener("timeupdate",function(){
+    update();
+    if(Math.floor(audio.currentTime)%3===0){try{localStorage.setItem(stateKey,JSON.stringify({time:audio.currentTime,playing:!audio.paused}))}catch(e){}}
+  });
+  audio.addEventListener("play",function(){btn.textContent="PAUSE";try{localStorage.setItem(stateKey,JSON.stringify({time:audio.currentTime,playing:true}))}catch(e){}});
+  audio.addEventListener("pause",function(){btn.textContent="PLAY";try{localStorage.setItem(stateKey,JSON.stringify({time:audio.currentTime,playing:false}))}catch(e){}});
+  btn.addEventListener("click",function(){if(audio.paused){audio.play().catch(()=>{});}else audio.pause();});
+  progress.addEventListener("input",function(){if(audio.duration) audio.currentTime=(Number(progress.value)/100)*audio.duration;});
+  document.addEventListener("visibilitychange",function(){if(document.hidden){try{localStorage.setItem(stateKey,JSON.stringify({time:audio.currentTime,playing:!audio.paused}))}catch(e){}}});
+  audio.addEventListener("canplay",function(){
+    try{
+      const saved=JSON.parse(localStorage.getItem(stateKey)||"{}");
+      if(saved.playing) audio.play().catch(()=>{});
+      else audio.play().catch(()=>{});
+    }catch(e){audio.play().catch(()=>{});}
+  },{once:true});
+  update();
+})();
+</script>
 </body></html>
